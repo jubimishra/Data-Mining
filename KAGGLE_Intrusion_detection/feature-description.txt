@@ -1,0 +1,54 @@
+featID	feature name	type	description
+1.	ID	continuous	unique record ID (not a feature)
+2.	duration	continous	length (number of seconds) of the connection
+3.	protocol_type  	discrete	type of the protocol, e.g. tcp, udp, etc.
+4.	service  	discrete	network service on the destination, e.g., http, telnet, etc.
+5.	flag  	discrete 	normal or error status of the connection
+6.	src_bytes  	continuous	number of data bytes from source to destination
+7.	dst_bytes  	continuous	number of data bytes from destination to source
+8.	land  	discrete	1 if connection is from/to the same host/port; 0 otherwise
+9.	wrong_fragment 	continuous 	number of ``wrong'' fragments
+10.	urgent 	continuous 	number of urgent packets
+
+11.	hot 	continuous	number of ``hot'' indicators
+12.	num_failed_logins  	continuous	number of failed login attempts
+13.	logged_in  	discrete	1 if successfully logged in; 0 otherwise
+14.	num_compromised  	continuous	number of ``compromised'' conditions
+15.	root_shell  	discrete	1 if root shell is obtained; 0 otherwise
+16.	num_shells  	continuous	number of shell prompts
+17.	num_root  	continuous	number of ``root'' accesses
+18.	num_file_creations  	continuous	number of file creation operations
+19.	su_attempted  	discrete	1 if ``su root'' command attempted; 0 otherwise
+20.	num_access_files  	continuous	number of operations on access control files
+21.	num_outbound_cmds 	continuous	number of outbound commands in an ftp session
+22.	is_hot_login  	discrete	1 if the login belongs to the ``hot'' list; 0 otherwise
+23.	is_guest_login  	discrete	1 if the login is a ``guest''login; 0 otherwise
+
+24.	count  	continuous	number of connections to the same host as the current connection in the past two seconds
+
+Note: The following  features refer to these same-host connections.	
+25.	srv_count  	continuous	number of connections to the same service as the current connection in the past two seconds
+26.	serror_rate  	continuous	% of connections that have ``SYN'' errors
+27.	rerror_rate  	continuous	% of connections that have ``REJ'' errors
+28.	same_srv_rate  	continuous	% of connections to the same service
+29.	diff_srv_rate  	continuous	% of connections to different services
+
+Note: The following features refer to these same-service connections.	
+30.	srv_serror_rate	continuous	% of connections that have ``SYN'' errors
+31.	srv_rerror_rate	continuous	% of connections that have ``REJ'' errors
+32.	srv_diff_host_rate  	continuous	% of connections to different hosts
+
+Note: The following features refer to analogous features as above, but corresponding to the destination host
+33.	dst_host_count	continuous	number of connections to the same destination as the current connection in the past two seconds
+34.	dst_host_srv_count	continuous	number of connections to the same service as the current connection in the past two seconds
+35.	dst_host_same_srv_rate	continuous	% of connections to the same service
+36.	dst_host_diff_srv_rate	continuous	% of connections to different services
+37.	dst_host_same_src_port_rate	continuous	% of connections to the same source port
+38.	dst_host_srv_diff_host_rate	continuous	% of connections to the same service, but different hosts
+39.	dst_host_serror_rate	continuous	% of connections that have ``SYN'' errors (same host)
+40.	dst_host_srv_serror_rate	continuous	% of connections that have ``SYN'' errors (same host)
+41.	dst_host_rerror_rate	continuous	% of connections that have ``REJ'' errors (same service)
+42.	dst_host_srv_rerror_rate	continuous 	% of connections that have ``REJ'' errors (same service)
+
+43.	class label	discrete	(for training data only) one of the following nine classes: back,ipsweep,neptune,normal,portsweep,satan,smurf,teardrop,warezclient
+
