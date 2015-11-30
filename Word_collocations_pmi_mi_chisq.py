@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# ##Question 1 : Word Collocations
+#  Word Collocations
 
 # ### Used Tweet Tokenizer in nltk to tokenize the tweets. The strip handler parameter removes the twitter user handles.
 
